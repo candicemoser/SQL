@@ -1,0 +1,18 @@
+CREATE TABLE cookiemonster (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, flavors TEXT, sold INTEGER);
+INSERT INTO cookiemonster VALUES (1, "suga suga", 5, 1.25, "sugar cookie", 2);
+INSERT INTO cookiemonster VALUES (2, "chippy", 10, 1.25, "chocolate chip", 6);
+INSERT INTO cookiemonster VALUES (3, "brownie batter", 5, 1.75, "brownie", 4);
+INSERT INTO cookiemonster VALUES (4, "lemonade", 5, 1.75, "lemon", 2);
+INSERT INTO cookiemonster VALUES (5, "oat dunk", 5, 1.75, "oatmeal", 2);
+INSERT INTO cookiemonster VALUES (6, "Creamy pb", 10, 1.25, "Peanut butter", 3);
+INSERT INTO cookiemonster VALUES (7, "bullseye", 5, 1.25, "peanut butter chocolate", 3);
+INSERT INTO cookiemonster VALUES (8, "cinnamon twist", 5, 1.75, "snickerdoodle", 4);
+INSERT INTO cookiemonster VALUES (9, "white chippy", 5, 1.75, "white macademia", 2);
+INSERT INTO cookiemonster VALUES (10, "choco kiss", 5, 1.25, "pb kiss", 1);
+INSERT INTO cookiemonster VALUES (11, "gingerbread", 5, 1.75, "ginger snaps", 3);
+INSERT INTO cookiemonster VALUES (12, "velvet cake", 5, 1.75, "red velvet", 1);
+INSERT INTO cookiemonster VALUES (13, "choccy choco", 5, 1.75, "double chocolate chip", 4);
+INSERT INTO cookiemonster VALUES (14, "mm cookies", 5, 1.25, "m m cookies", 1);
+INSERT INTO cookiemonster VALUES (15, "pecan delight", 5, 1.75, "pecan cookies", 4);
+SELECT * FROM cookiemonster WHERE price > 1.00 ORDER BY price DESC;
+SELECT * FROM cookiemonster ORDER BY sold
