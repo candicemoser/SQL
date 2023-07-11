@@ -1,0 +1,47 @@
+/*Famous People*/
+CREATE TABLE artists(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    state_born TEXT);
+    
+INSERT INTO artists (name, state_born) VALUES ("Dolly Parton", "TN");
+INSERT INTO artists (name, state_born) VALUES ("Justin Timberlake", "TN");
+INSERT INTO artists (name, state_born) VALUES ("Tina Turner", "TN");
+INSERT INTO artists (name, state_born) VALUES ("Jason Aldean", "GA");
+INSERT INTO artists (name, state_born) VALUES ("Usher", "GA");
+INSERT INTO artists (name, state_born) VALUES ("Quavo", "GA");
+INSERT INTO artists (name, state_born) VALUES ("Ariana Grande", "FL");
+INSERT INTO artists (name, state_born) VALUES ("Marilyn Mason", "FL");
+INSERT INTO artists (name, state_born) VALUES ("Glenn Jones", "FL");
+INSERT INTO artists (name, state_born) VALUES ("Flo Milli", "AL");
+INSERT INTO artists (name, state_born) VALUES ("Sara Evans", "AL");
+INSERT INTO artists (name, state_born) VALUES ("Eddie Floyd", "AL");
+
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    artist_id INTEGER,
+    title TEXT,
+    genre TEXT);
+    
+INSERT INTO songs (artist_id, title, genre) VALUES (1, "Jolene", "Country");
+INSERT INTO songs (artist_id, title, genre) VALUES (2, "My love", "Pop");
+INSERT INTO songs (artist_id, title, genre) VALUES (3, "Whats love got to do with it", "Rock");
+INSERT INTO songs (artist_id, title, genre) VALUES (4, "Dirt road anthem", "Country");
+INSERT INTO songs (artist_id, title, genre) VALUES (5, "Yeah", "R&b");
+INSERT INTO songs (artist_id, title, genre) VALUES (6, "Bubble gum", "Rap");
+INSERT INTO songs (artist_id, title, genre) VALUES (7, "Thank you next", "Pop");
+INSERT INTO songs (artist_id, title, genre) VALUES (8, "Sweet dreams", "Rock");
+INSERT INTO songs (artist_id, title, genre) VALUES (9, "Here I go again", "R&B");
+INSERT INTO songs (artist_id, title, genre) VALUES (10, "In the party", "Rap");
+INSERT INTO songs (artist_id, title, genre) VALUES (11, "Suds in the bucket", "Country");
+INSERT INTO songs (artist_id, title, genre) VALUES (12, "Knock on wood", "R&b");
+
+SELECT artists.name, artists.state_born, songs.genre
+FROM artists
+JOIN songs ON artists.id=songs.artist_id
+WHERE genre="Country";
+
+SELECT songs.artist_id, artists.name, songs.title, artists.state_born
+FROM artists
+JOIN songs ON artists.id=songs.artist_id
+WHERE state_born= "FL";
