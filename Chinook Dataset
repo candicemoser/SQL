@@ -1,1 +1,3 @@
+#For this project, I downloaded chinook, which represents a digital media store and includes tables for artists, albums, media tracks, invoices, and customers.
 #I'm using multiple tables to perform analytics on the data using SQL. 
+
